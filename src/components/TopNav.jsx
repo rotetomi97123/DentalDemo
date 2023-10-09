@@ -40,7 +40,7 @@ export default TopNav
 const Wrapper = styled.div`
   display:flex;
   justify-content: space-between;
-  padding: 1.2em 0.5rem;
+  padding: 1.2em 3rem;
   img{
     width: 250px;
     height: 30px;
@@ -63,7 +63,7 @@ const LanguageWrapper = styled.div`
   transform: translate(-50%, -50%);
 `
 const PlanetLogo = styled(ImEarth)`
-  color:blue;
+  color:#0047AB;
   font-size: 1.5rem;
   margin-right: 0.5rem;
 `
