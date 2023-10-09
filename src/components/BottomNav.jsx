@@ -72,6 +72,9 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:space-between;
     margin: 0 4rem;
+    @media (max-width: 1200px){
+        display:none;
+      }
 `
 const RightDiv = styled.div`
     display:flex;
