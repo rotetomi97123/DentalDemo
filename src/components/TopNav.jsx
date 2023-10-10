@@ -175,7 +175,7 @@ const MobileMenu = styled.div`
 const LanguageWrapper = styled.div`
   position:absolute;
   width:100%;
-  height: 100vh;
+  height: 40vh;
   z-index: 100;
   top: 50%;
   left: 50%;

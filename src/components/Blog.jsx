@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 const ItemDiv = styled.div`
     position: relative;
     width: 325px;
-    height: 480px;
+    height: 490px;
     background: white; 
     border-radius: 0.5rem;  
     cursor:pointer;
