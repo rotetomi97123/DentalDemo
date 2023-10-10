@@ -50,6 +50,9 @@ const Box = styled.div`
         background: none;
         margin-top: 0.5rem;
     }
+    @media (max-width: 500px){
+        width: 80%;
+    }
 `
 const Btn = styled.button`
     color:white;

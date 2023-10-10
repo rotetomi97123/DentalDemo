@@ -38,7 +38,7 @@ const TopNav = () => {
   return (
     <>
       <Wrapper>
-        {isScreenSmall ? (<AiOutlineMenu size={26} onClick={() => (setMobileMenu(true))} />) : null}
+        {isScreenSmall ? (<AiOutlineMenu size={26} onClick={() => (setMobileMenu(true))} style={{cursor:'pointer'}} />) : null}
         <img src='https://www.dental-medical.hu/images/dentalmedical_logo.png?v=1.03' alt='logo' />
         <SearchContainer>
           <input type='text' placeholder='Keresés...' />
@@ -156,8 +156,10 @@ const Exit = styled.div`
   top: 1rem;
   right: 2rem;
   font-size: 1.2rem;
+  cursor: pointer;
 `
 const MobileMenu = styled.div`
+  padding-top: 2rem;
   z-index: 100;
   position: absolute;
   width: 100%;
@@ -165,6 +167,10 @@ const MobileMenu = styled.div`
   top: 0;
   left: 0;
   background: white;
+  ul{
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
 `
 const LanguageWrapper = styled.div`
   position:absolute;
