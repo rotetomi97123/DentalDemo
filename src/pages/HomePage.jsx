@@ -4,6 +4,8 @@ import BottomNav from '../components/BottomNav'
 import Hero from '../components/Hero'
 import Blog from '../components/Blog'
 import Esemenyek from '../components/Esemenyek'
+import Dental from '../components/Dental'
+import Numbers from '../components/Numbers'
 
 const HomePage = () => {
   return (
@@ -13,6 +15,8 @@ const HomePage = () => {
         <Hero />
         <Blog />
         <Esemenyek />
+        <Dental />
+        <Numbers />
     </div>
   )
 }

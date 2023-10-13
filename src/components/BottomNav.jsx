@@ -71,7 +71,8 @@ export default BottomNav
 const Wrapper = styled.div`
     display:flex;
     justify-content:space-between;
-    margin: 0 4rem;
+    padding: 0.5rem 4rem;
+    background-color:#ECECEC;
     @media (max-width: 1200px){
         display:none;
       }

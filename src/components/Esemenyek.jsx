@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Splide, SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import { esemenyekComp } from './data'
@@ -6,35 +6,60 @@ import {AiOutlineCalendar, AiOutlineEye} from 'react-icons/ai'
 import styled from 'styled-components'
 
 const Esemenyek = () => {
+    const [perPageOption, setPerPageOption] = useState(4);
+
+    useEffect(() => {
+        const handleResize = () => {
+          const windowWidth = window.innerWidth;
+
+          if (windowWidth < 700) {
+            setPerPageOption(1);
+          } else if (windowWidth < 1100) {
+            setPerPageOption(2);
+          } else if(windowWidth < 1400){
+            setPerPageOption(3);
+          }else {
+            setPerPageOption(4)
+          }
+        };
+    
+        handleResize();
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+    
   return (
     <div>
     <ComponentWrapper>
         <TextDiv>
             <h1>Események</h1>
         </TextDiv>
-            <Splide 
-                options={{
-                    type: 'slide',
-                    perPage: 4,
-                    perMove: 1,
-                    arrows: false
-                }} 
-            >
-                {esemenyekComp.map((item,index) => {
-                    return(
-                        <SplideSlide key={index}>
-                            <Card>
-                                <img src={item.img} alt={item.name} />
-                                <h2>{item.name}</h2>
-                                <p>{item.text}</p>
-                                <span>
-                                    <div><AiOutlineCalendar style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.date}</div>
-                                    <div><AiOutlineEye style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.viewers}</div>
-                                </span>                        </Card>
-                        </SplideSlide>
-                    )
-                })}
-            </Splide>
+                <Splide 
+                    options={{
+                        type: 'slide',
+                        perPage: perPageOption,
+                        arrows: false,
+                    }} 
+                    >
+                    {esemenyekComp.map((item,index) => {
+                        return(
+                            <ItemsWrapper key={index}>
+                                <Card>
+                                    <img src={item.img} alt={item.name} />
+                                    <h2>{item.name}</h2>
+                                    <p>{item.text}</p>
+                                    <span>
+                                        <div><AiOutlineCalendar style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.date}</div>
+                                        <div><AiOutlineEye style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.viewers}</div>
+                                    </span>                        </Card>
+                            </ItemsWrapper>
+                        )
+                    })}
+                </Splide>
     /</ComponentWrapper>
     </div>
   )
@@ -64,7 +89,7 @@ const Card = styled.div`
     p{
         color: #333333;
         font-weight: 400;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         text-align:left;
         padding: 0 0.5rem;
     }
@@ -83,6 +108,7 @@ const Card = styled.div`
         }
     }
     img{
+        width: 90%;
         transition: transform 0.3s ease;
         &:hover{
             transform: scale(1.05);
@@ -97,4 +123,11 @@ const TextDiv = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+`
+const ItemsWrapper = styled(SplideSlide)`
+    width: 100%;    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 0 1rem;
 `

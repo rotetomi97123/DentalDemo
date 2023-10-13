@@ -55,7 +55,8 @@ export default Hero
 
 const Card = styled.div`
     img{
-        height: 80vh;
+        width: 100%;
+        height: auto;
         @media (max-width: 1200px){
             width: 100%;
             height: auto;
@@ -70,5 +71,4 @@ const Card = styled.div`
     }
 `
 const Wrapper = styled.div`
-    margin-top: 1rem;
 `
