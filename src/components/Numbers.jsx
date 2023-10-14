@@ -42,6 +42,10 @@ const ItemWrapper = styled.div`
     display:flex;
     width: 100%;
     justify-content:center;
+    @media (max-width: 700px){
+        flex-direction:column;
+        align-items:center;
+    }
 `
 const ItemDiv = styled.div`
     width: 250px;
@@ -54,6 +58,9 @@ const ItemDiv = styled.div`
         font-size: 0.9rem;
         text-align:center;
         margin-top: 1rem;
+        @media (max-width: 700px){
+            margin: 1rem 0;
+        }
     }
 `
 const TextDiv = styled.div`
@@ -63,4 +70,5 @@ const TextDiv = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    text-align:center;
 `

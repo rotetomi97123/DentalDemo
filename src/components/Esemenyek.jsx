@@ -60,7 +60,7 @@ const Esemenyek = () => {
                         )
                     })}
                 </Splide>
-    /</ComponentWrapper>
+    </ComponentWrapper>
     </div>
   )
 }
@@ -106,6 +106,9 @@ const Card = styled.div`
             display:flex;
             align-items:center;
         }
+        @media (max-width: 400px){
+            width: 90%;
+        }
     }
     img{
         width: 90%;
@@ -114,6 +117,9 @@ const Card = styled.div`
             transform: scale(1.05);
             transition: 0.2s ease;
         }
+    }
+    @media (max-width: 400px){
+        width: 90%;
     }
 
 `

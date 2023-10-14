@@ -68,6 +68,9 @@ const ItemDiv = styled.div`
             display:flex;
             align-items:center;
         }
+        @media (max-width: 400px){
+            width: 90%;
+        }
     }
     img{
         display: block;
@@ -76,6 +79,9 @@ const ItemDiv = styled.div`
             transform: scale(1.05);
             transition: 0.2s ease;
         }
+    }
+    @media (max-width: 400px){
+        width: 90%;
     }
 `
 const TextDiv = styled.div`
