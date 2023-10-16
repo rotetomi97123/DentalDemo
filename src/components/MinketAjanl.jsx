@@ -22,7 +22,7 @@ const MinketAjanl = () => {
   
   return (
     <Wrapper>
-        <div>
+        <LeftWrapper>
             <h1>Minket ajánlott</h1>
             <Box>
                <h2>{comments[count].title}</h2>
@@ -53,17 +53,17 @@ const MinketAjanl = () => {
                     </RightSide>
                </NameDiv>
             </Box>
-        </div>
+        </LeftWrapper>
         <RightWrapper>
             <TopSection>
                 <p
-                    selectedIem={selectedComp === '1'}
+                    selecteditem={selectedComp === '1'}
                     onClick={() => (handleCompClick('1'),setNumber(0))}>SZERVIZ ÉS KARBANTARTÁS</p>
                 <p
-                selectedItem={selectedComp === '2'}
+                selecteditem={selectedComp === '2'}
                 onClick={() => (handleCompClick('2'),setNumber(1))}>SEGITSÉG LIZINGHEZ ÉS A HITELFELVÉTELHEZ</p>
                 <p
-                 selectedItem={selectedComp === '3'}
+                 selecteditem={selectedComp === '3'}
                  onClick={() => (handleCompClick('3'),setNumber(2))}>TANÁCSADÁS</p>
             </TopSection>
             <BottomSection>
@@ -90,6 +90,16 @@ const Wrapper = styled.div`
     }
     @media (max-width: 1600px){
         display:flex;
+        flex-direction:column;
+        padding: 0 0;
+    }
+`
+const LeftWrapper = styled.div`
+    @media (max-width: 700px){
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
         flex-direction:column;
     }
 `
@@ -124,6 +134,7 @@ const RightWrapper = styled.div`
         width: 90%;
         height: auto;
     }
+   
 `
 const TopSection = styled.div`
     display:flex;
@@ -137,6 +148,13 @@ const TopSection = styled.div`
         &:hover{
             color:#0047AB;
             transition: 0.3s ease;
+        }
+    }
+    @media (max-width: 700px){
+        flex-direction:column;
+        p{
+            margin-bottom: 0.5rem;
+            text-align:center;
         }
     }
 `
@@ -156,11 +174,20 @@ const BottomSection = styled.div`
             transform: scale(1.05);
             transition: 0.2s ease;
         }
+        @media (max-width: 600px){
+           width: 200px;
+           height:auto;
+           margin-bottom: 0.5rem;
+        }
     }
     span{
         display:flex;
         flex-direction:column;
         align-items:flex-start;
+    }
+    @media (max-width: 600px){
+        flex-direction:column;
+        width:100%;
     }
 `
 const SmallBox = styled.button`
@@ -175,6 +202,7 @@ const SmallBox = styled.button`
 const LeftSide = styled.div`
     display:flex;
     align-items:center;
+    justify-content:center;
 `
 const RightSide = styled.div`
 
@@ -206,6 +234,11 @@ const NameDiv = styled.div`
     }
     h4{
         font-weight: 100;
+    }
+    @media (max-width: 450px){
+        flex-direction:column;
+        padding: 0 0;
+        justify-content:center;
     }
 `
 const Box = styled.div`

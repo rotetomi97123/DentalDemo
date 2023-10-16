@@ -43,6 +43,7 @@ const Esemenyek = () => {
                         type: 'slide',
                         perPage: perPageOption,
                         arrows: false,
+                        gap: '0rem'
                     }} 
                     >
                     {esemenyekComp.map((item,index) => {
@@ -72,16 +73,17 @@ const ComponentWrapper = styled.div`
     width: 100%;
     height: auto;
     background-color:#ECECEC; 
+    padding: 0 6rem;
 `
 const Card = styled.div`
     position: relative;
-    width: 325px;
+    width: 350px;
     height: 480px;
     background: white; 
     border-radius: 0.5rem;  
     cursor:pointer;
     overflow:hidden;
-    margin: 0.8rem;
+    margin: 0 0.5rem;
     h2{
         font-size: 1rem;
         padding: 0.5rem 0.5rem;
@@ -96,8 +98,8 @@ const Card = styled.div`
     span{
         position: absolute;
         bottom: 0;
-        width: 325px;
         display:flex;
+        width: 350px;
         justify-content:space-between;
         align-items:center;
         margin-top: 1.5rem;
@@ -135,5 +137,4 @@ const ItemsWrapper = styled(SplideSlide)`
     display:flex;
     justify-content:center;
     align-items:center;
-    padding: 0 1rem;
 `
