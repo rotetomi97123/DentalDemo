@@ -100,7 +100,7 @@ const ListItem = styled.li`
     margin-right: 1rem;
     list-style-type: none;
     font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
     cursor: pointer;
     border-bottom: ${(props) => (props.selected ? '3px solid #0047AB' : 'none')};
     &:hover{
