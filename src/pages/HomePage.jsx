@@ -6,6 +6,7 @@ import Blog from '../components/Blog'
 import Esemenyek from '../components/Esemenyek'
 import Dental from '../components/Dental'
 import Numbers from '../components/Numbers'
+import MinketAjanl from '../components/MinketAjanl'
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
         <Esemenyek />
         <Dental />
         <Numbers />
+        <MinketAjanl />
     </div>
   )
 }

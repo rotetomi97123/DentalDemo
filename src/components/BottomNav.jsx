@@ -73,6 +73,11 @@ const Wrapper = styled.div`
     justify-content:space-between;
     padding: 0.5rem 4rem;
     background-color:#ECECEC;
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
     @media (max-width: 1200px){
         display:none;
       }

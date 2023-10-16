@@ -117,3 +117,51 @@ export const esemenyekComp = [
         viewers: 321
     }
 ]
+export const comments = [
+    {
+        id:1,
+        title: 'Jól megszervezett csapat',
+        text: 'Mindig kedves és mosolygós értékesitők,megbizható és jól megszervezett csapat',
+        name: 'Jázai Terék Erika',
+        position: 'Fogtechnikus'
+    },
+    {
+        id:2,
+        title: 'Best buy',
+        text: 'Az ár ás a minőség magáért beszél',
+        name: 'Kis Andrea',
+        position: 'Fogtechnikus'
+    },
+    {
+        id:3,
+        title: 'Jó minőség',
+        text: 'Kedves és vidám értékesitők, a jó minőségű anyagok pedig garantálva vannak',
+        name: 'Dr Kovács Levente',
+        position: 'Fogorvos'
+    },
+    {
+        id:4,
+        title: 'Magas szinvonal',
+        text: 'Képzett értékesitők, szinvonalas,minőségi termékek,gyors kiszállitás',
+        name: 'Dr Balog György',
+        position: 'Fogorvos'
+    },
+]
+
+export const work = [
+    {
+        id: 1,
+        img: 'https://www.dental-medical.hu/files/other/2021.05.19.10.38.42_60a4ce924f2bb_Servis-i-odrzavanje-01_home.webp',
+        text: 'A berendezések hibátlan működése kulcsfontosságú a sikeres üzletben. Mi azzal foglalkozunk, hogy készülékei és felszerelése úgy működjenek, hogy Önnek csak a munkájára kelljen öszpontosítani.'
+    },
+    {
+        id: 2,
+        img: 'https://www.dental-medical.hu/files/other/2021.05.19.10.38.42_60a4ce925c5b8_Pomoc-01_home.webp',
+        text: 'Szeretné megvalósítani céljait? Betegeinek a lehető legjobb szolgáltatást nyújtja? Folyamatosan fektet bele a rendelő felszerelésébe és alkalmazottai képzésébe? Ebben az esetben Önnek szüksége van egy szakmai partnerre, aki a vállalkozása pénzügyi kihívásainak megoldására fókuszál. Vezető egészségügyi és fogászati termékforgalmazó cégként elegendő tapasztalattal rendelkezünk. Különféle szolgáltatásokat nyújtunk, mint pl. megismertetjük egy szakemberekből álló hálózattal, akik segíthetnek Önnek céljai elérésében.'
+    },
+    {
+        id: 3,
+        img: 'https://www.dental-medical.hu/files/other/2021.05.19.10.38.42_60a4ce9267d75_Savetovanje-01_home.webp',
+        text: 'Szeretne befektetni az új technológiákba, új berendezéseket vásárolni, rendelőt/laboratóriumot nyitni, költöztetni, bővíteni? Ilyenkor rengeteg kérdés fogalmazódik meg a beruházás pénzügyi indokoltságát, technikai igényeket, törvényi előírásokat, felszerelések kiválasztását, finanszírozást stb. illetően. Használja ki magasszintű tudásunkat, anyagismeretünket, felszereléseinket, technológiánkat, ismerje meg a legújabb trendeket valamint teljeskörű berendezéseinket. Kérjen tanácsot tőlünk és győződjön meg sokoldalúságunkról.'
+    }
+]

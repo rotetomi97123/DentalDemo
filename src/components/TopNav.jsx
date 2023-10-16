@@ -121,6 +121,12 @@ const Wrapper = styled.div`
   display:flex;
   justify-content: space-between;
   padding: 1.2em 3rem;
+  background:white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   img{
     width: 250px;
     height: 30px;

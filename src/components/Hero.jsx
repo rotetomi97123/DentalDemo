@@ -71,4 +71,5 @@ const Card = styled.div`
     }
 `
 const Wrapper = styled.div`
+    margin-top: 7rem;
 `
