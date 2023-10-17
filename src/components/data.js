@@ -165,3 +165,47 @@ export const work = [
         text: 'Szeretne befektetni az új technológiákba, új berendezéseket vásárolni, rendelőt/laboratóriumot nyitni, költöztetni, bővíteni? Ilyenkor rengeteg kérdés fogalmazódik meg a beruházás pénzügyi indokoltságát, technikai igényeket, törvényi előírásokat, felszerelések kiválasztását, finanszírozást stb. illetően. Használja ki magasszintű tudásunkat, anyagismeretünket, felszereléseinket, technológiánkat, ismerje meg a legújabb trendeket valamint teljeskörű berendezéseinket. Kérjen tanácsot tőlünk és győződjön meg sokoldalúságunkról.'
     }
 ]
+
+export const companies = [
+    {
+        id:1,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.17.10.50.30_5e218366670a1_Hager-and-werken_resized.webp'
+    },
+    {
+        id:2,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.10.58.50_5e1d90daaeb39_Hanel-sivi_resized.webp'
+    },
+    {
+        id:3,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.10.59.10_5e1d90ee1cab5_Kulzer--gray_resized.webp'
+    },
+    {
+        id:4,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.11.15.48_5e1d94d433db0_Mani-gray_resized.webp'
+    },
+    {
+        id:5,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.10.40.38_5e1d8c96aadfb_Cato--gray_resized.webp'
+    },
+    {
+        id:6,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.10.39.55_5e1d8c6bf103d_bego-gray_resized.webp'
+    },
+    {
+        id: 7,
+        img: 'https://www.dental-medical.hu/files/brands/2023.10.13.11.33.38_65290ef265307_cerkamed-grej_resized.webp'
+    },
+    {
+        id: 8,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.10.42.33_5e1d8d0939e3c_Euronda--gray_resized.webp'
+    },
+    {
+        id: 9,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.14.10.44.18_5e1d8d7258a37_GC--gray_resized.webp'
+    },
+    {
+        id: 10,
+        img: 'https://www.dental-medical.hu/files/brands/2020.01.17.10.51.19_5e218397c854a_Harvard-sivi_resized.webp'
+    }
+    
+]

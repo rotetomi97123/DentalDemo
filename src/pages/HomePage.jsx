@@ -7,6 +7,8 @@ import Esemenyek from '../components/Esemenyek'
 import Dental from '../components/Dental'
 import Numbers from '../components/Numbers'
 import MinketAjanl from '../components/MinketAjanl'
+import Companies from '../components/Companies'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -19,6 +21,8 @@ const HomePage = () => {
         <Dental />
         <Numbers />
         <MinketAjanl />
+        <Companies />
+        <Footer />
     </div>
   )
 }
