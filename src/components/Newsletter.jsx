@@ -99,6 +99,7 @@ const InputDiv = styled.div`
     background:none;
     display:flex;
     justify-content:space-between;
+    margin-left: 0.5rem;
     input{
         width: 90%;
         border: none;
