@@ -74,6 +74,9 @@ const ComponentWrapper = styled.div`
     height: auto;
     background-color:#ECECEC; 
     padding: 0 6rem;
+    @media (max-width: 600px){
+        padding: 0 0;
+    }
 `
 const Card = styled.div`
     position: relative;
