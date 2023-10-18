@@ -1,59 +1,38 @@
 import React, { useState } from 'react'
 import {BsCartFill,BsFillTelephoneFill} from 'react-icons/bs'
 import styled from 'styled-components'
-
+import {Link} from 'react-router-dom'
 
 const BottomNav = () => {
 
-    const [selectedItem, setSelectedItem] = useState('Fooldal');
-
-    const handleItemClick = (item) => {
-      setSelectedItem(item);
-    };
+  
   return (
     <Wrapper>
         <LeftDiv>
             <ul>
-                <ListItem
-                    selected={selectedItem === 'Fooldal'}
-                    onClick={() => handleItemClick('Fooldal')}
-                >
-                Főoldal
+                <Link to='/'>
+                    <ListItem>
+                    Főoldal
+                    </ListItem>
+                </Link>
+                <Link to='/Blog'>
+                    <ListItem>
+                    Blog
+                    </ListItem>
+                </Link>
+                <ListItem>
+                    Események
                 </ListItem>
-                <ListItem
-                    selected={selectedItem === 'Blog'}
-                    onClick={() => handleItemClick('Blog')}
-                >
-                Blog
+                <ListItem>
+                    Rólunk
                 </ListItem>
-                <ListItem
-                    selected={selectedItem === 'Esemenyek'}
-                    onClick={() => handleItemClick('Esemenyek')}
-                >
-                Események
+                <ListItem>
+                    Katalógusok
                 </ListItem>
-                <ListItem
-                    selected={selectedItem === 'Rolunk'}
-                    onClick={() => handleItemClick('Rolunk')}
-                >
-                Rólunk
+                <ListItem>
+                    Beszállitóink
                 </ListItem>
-                <ListItem
-                    selected={selectedItem === 'Katalogus'}
-                    onClick={() => handleItemClick('Katalogus')}
-                >
-                Katalógusok
-                </ListItem>
-                <ListItem
-                    selected={selectedItem === 'Beszallitoink'}
-                    onClick={() => handleItemClick('Beszallitoink')}
-                >
-                Beszállitóink
-                </ListItem>
-                <ListItem
-                    selected={selectedItem === 'Shop'}
-                    onClick={() => handleItemClick('Shop')}
-                >
+                <ListItem>
                 <BsCartFill /> Shop
                 </ListItem>
             </ul>
@@ -91,7 +70,11 @@ const RightDiv = styled.div`
 `
 
 const LeftDiv = styled.div`
-   
+    a{
+        list-style-type:none;
+        text-decoration:none;
+        color:black;
+    }
     ul{
         display:flex;
     }

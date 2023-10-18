@@ -23,7 +23,9 @@ export const BlogComponents = [
         name: 'Ultrahangos tisztító egység - Easyclean MD',
         text: 'Az Easyclean MD ultrahangos tisztító egységet erőteljes tisztításra vagy előtisztításra* használják orvostechnikai eszközök, például szájbetétek és fogpótlások, valamint műszerek esetében (*nem helyettesíti az automatikus mosogató fertőtlenítőben...',
         date: '2023. szept 07.',
-        viewers: 226
+        viewers: 226,
+        category: 'Bemutatjuk'
+        
     },
     {
         id: 2,
@@ -31,7 +33,8 @@ export const BlogComponents = [
         name: 'VSXE One: Lenyomatanyag anyag a pontos implantátum- és nagy építési odtémekhez',
         text: 'Az VSXE One precíziós lenyomatanyag, vinil-polisziloxán és poliéter komponensekkel (Vinilsziloxanéter). Magas végleges keménységének köszönhetően különösen alkalmas implantátumlenyomatokhoz.',
         date: '2023. szept 07.',
-        viewers: 97
+        viewers: 97,
+        category: 'Újdonság,érdekesség'
     },
     {
         id: 3,
@@ -39,7 +42,8 @@ export const BlogComponents = [
         name: 'Lubricare 2 - Gyors, hatékony és költségmegtakarításos karbantartás',
         text: 'A Lubricare 2 automatikusan elvégzi a fogászati kézidarabok (tisztítás és kenés) karbantartását, melyek nélkülözhetetlenek a mindennapi gyakorlatban.',
         date: '2023. szept 07.',
-        viewers: 141
+        viewers: 141,
+        category: 'CAD-CAM'
     },
     {
         id: 4,
@@ -47,7 +51,8 @@ export const BlogComponents = [
         name: 'Előkészítés. Kattintás. Fókusz: könnyű hozzáférés és tiszta láthatóság a kezelési területen',
         text: 'A szájzugok és az arcoldalak hatékony visszahúzása a fogakról nagyon kívánatos fogorvosi kezelések során. Ismerje meg, hogyan lehet ellenőrizni a nedvességet. A szájzugok és az arcoldalak hatékony visszahúzása a fogakról nagyon kívánatos fogorvosi...',
         date: '2023. aug 10.',
-        viewers: 184
+        viewers: 184,
+        category: 'Implantológia és sebészet'
     },
     {
         id: 5,
@@ -55,7 +60,8 @@ export const BlogComponents = [
         name: 'Scheu Dental Újdonságai',
         text: 'UNIZ NBEE – SCHEU - A világ leggyorsabb fogászati nyomtatója BIOSTAR® 4-ALIGNER - Növelt termelékenység a minőség megtartása mellett A CA YES DOBOZ ITT VAN - TELJES MÉRTÉKBEN MEGKÖNNYÍTI A NAPI MUNKÁT SÍNEKKEL.',
         date: '2023. aug 08.',
-        viewers: 207
+        viewers: 207,
+        category: 'Protétika és esztétika'
     },
     {
         id: 6,
@@ -63,7 +69,8 @@ export const BlogComponents = [
         name: 'Charisma Bulk Flow One – leggyakoribb kérdések és válaszok',
         text: 'Miért használható a Charisma Bulk Flow ONE a rágás terhelésének területein? A Charisma Bulk Flow ONE egy folyékony bulk-filling kompozit, mindössze egy árnyalatban, amely megbízható és ellenálló a hátsó régió rágás terhelésével szemben. Ez a...',
         date: '2023. aug 08.',
-        viewers: 156
+        viewers: 156,
+        category: 'Konzerváló fogászat'
     },
     {
         id: 7,
@@ -71,7 +78,8 @@ export const BlogComponents = [
         name: '3 ok, hogy válassza az univerzális adhézívokat',
         text: 'Amikor a fogászati adhézívokról van szó, a fogorvosok számos lehetőséggel rendelkeznek. Bár a sok adhézív lehetőség áldásnak tűnhet, gyakran zavart és frusztrációt okoz. Ragasztóerő, technikai kompatibilitás, könnyű használat, kikeményedési...',
         date: '2023. júl 10.',
-        viewers: 667
+        viewers: 667,
+        category: 'Gyökérkezelés'
     },
     {
         id: 8,
@@ -79,7 +87,8 @@ export const BlogComponents = [
         name: 'Mire érdemes figyelni egy nagyszerű porcelán ragasztó termék kiválasztása során?',
         text: 'Ez a blog Dr. Paulo Vinicius Soares tollából származik. Ő egy nemzetközileg ismert fogorvos, előadó, professzor, kutató és szerző, aki Brazíliában praktizál. Az a típusú kezelés, amit a fogorvosok a kerámia rekonstrukció belső felületén...',
         date: '2023. júl 04.',
-        viewers: 216
+        viewers: 216,
+        category: 'Fogszabályozás'
     }
 ]
 
