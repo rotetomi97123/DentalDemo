@@ -11,10 +11,16 @@ import { Splide, SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import {IoIosArrowDown,IoIosArrowUp} from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
-const BlogPage = () => {
+const BlogItem = () => {
 
-//Responsive
+    const location = useLocation();
+  const { item } = location.state;
+
+  console.log(item.img)
+
+  //Responsive
   const [isMobile,setIsmobile] = useState(window.innerWidth < 1200)
   const [isOpen,setIsOpen] = useState(false)
 
@@ -51,12 +57,11 @@ const BlogPage = () => {
     {isActive ? filteredItems : Components }   
   },[isActive])
 //FilterEnd
-
   return (
     <div>
         <TopNav />
         <BottomNav />
-        <MainText>Főoldal / <span>Blog</span></MainText>
+        <MainText>Főoldal / <span>Blog / {item.name}</span> </MainText>
         {isMobile &&<MobileCategory>
             <MobileTitle>
               <BiSolidCategory size={25} />
@@ -74,7 +79,7 @@ const BlogPage = () => {
             </div>: ''}
         </MobileCategory>}
         <Wrapper>
-          {isMobile === false ?<LeftDiv>
+        {isMobile === false ?<LeftDiv>
             <CateGoryTitle>
               <BiSolidCategory size={25} />
               <h2>KATEGÓRIÁK</h2>
@@ -121,21 +126,17 @@ const BlogPage = () => {
             </MostRead>
           </LeftDiv> : ''}
           <RightDiv> 
-            <h1>Blog</h1>
+            <h1>{item.name}</h1>
              <ComponentWrapper>
-              {filteredItems.map((item,index) => {
-                  return(
-                      <ItemDiv key={index}>
-                          <Link to='/BlogItem' state={{ item: item }}><img src={item.img} alt={item.name} /></Link>
+                      <ItemDiv>
+                          <img src={item.img} alt='img' />
                           <h2>{item.name}</h2>
-                          <p>{item.text}</p>
-                          <span>
-                              <div><AiOutlineCalendar style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.date}</div>
-                              <div><AiOutlineEye style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.viewers}</div>
-                          </span>
+                                    <p>{item.text}</p>
+                                    <span>
+                                        <div><AiOutlineCalendar style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.date}</div>
+                                        <div><AiOutlineEye style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.viewers}</div>
+                                    </span>                
                       </ItemDiv>
-                  )
-              })}
              </ComponentWrapper>
               {isMobile &&
               <>
@@ -168,7 +169,7 @@ const BlogPage = () => {
                   </Splide>
               </>}
           </RightDiv>
-        </Wrapper>
+          </Wrapper>
         <Companies />
         <Footer />
     </div>
@@ -268,7 +269,7 @@ const LeftDiv = styled.div`
 `
 const ComponentWrapper = styled.div`
   display:flex;
-  flex-wrap:wrap;
+  justify-content:center;
   @media (max-width: 1200px){
     justify-content:center;
    }
@@ -396,4 +397,5 @@ const ItemsWrapper = styled(SplideSlide)`
     align-items:center;
     margin-top: 2rem;
 `
-export default BlogPage
+
+export default BlogItem
