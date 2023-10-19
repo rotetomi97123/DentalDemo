@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import TopNav from '../components/TopNav'
 import BottomNav from '../components/BottomNav'
@@ -10,17 +10,49 @@ import {BiSolidCategory} from 'react-icons/bi'
 import { Splide, SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import { esemenyekComp } from '../components/data'
+import {IoIosArrowDown,IoIosArrowUp} from 'react-icons/io'
 
 const BlogPage = () => {
 
+  const [isMobile,setIsmobile] = useState(window.innerWidth < 1200)
+  const [isOpen,setIsOpen] = useState(false)
 
+  useEffect (() => {
+    const handleResize = () =>{
+      setIsmobile(window.innerWidth < 1200)
+    }
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  },[])
+
+
+  
   return (
     <div>
         <TopNav />
         <BottomNav />
         <MainText>Főoldal / <span>Blog</span></MainText>
+        {isMobile &&<MobileCategory>
+            <MobileTitle>
+              <BiSolidCategory size={25} />
+              <h2>KATEGÓRIÁK</h2>   
+              {isOpen ? <ArrowDown  onClick={() => (setIsOpen(prev => !prev))} size={30}/> : <ArrowUp onClick={() => (setIsOpen(prev => !prev))} size={30} />}
+            </MobileTitle>
+            {isMobile && isOpen ?<div>
+              {BlogComponents.map((item,index) => {
+                  return(
+                    <CategoryItemDiv key={index}>
+                      <p>{item.category}</p>
+                    </CategoryItemDiv>
+                  )
+                })}
+            </div>: ''}
+        </MobileCategory>}
         <Wrapper>
-          <LeftDiv>
+          {isMobile === false ?<LeftDiv>
             <CateGoryTitle>
               <BiSolidCategory size={25} />
               <h2>KATEGÓRIÁK</h2>
@@ -63,7 +95,7 @@ const BlogPage = () => {
                     })}
                 </Splide>
             </MostRead>
-          </LeftDiv>
+          </LeftDiv> : ''}
           <RightDiv> 
             <h1>Blog</h1>
              <ComponentWrapper>
@@ -81,6 +113,36 @@ const BlogPage = () => {
                   )
               })}
              </ComponentWrapper>
+              {isMobile &&
+              <>
+              <CateGoryTitle>
+                <AiOutlineEye size={25} />
+                <h2>LEGOLVASOTTABBAK</h2>
+              </CateGoryTitle>
+              <Splide 
+                      options={{
+                          type: 'slide',
+                          perPage: 1,
+                          arrows: true,
+                          gap: '0rem'
+                      }} 
+                      >
+                      {esemenyekComp.map((item,index) => {
+                          return(
+                              <ItemsWrapper key={index}>
+                                  <Card>
+                                      <img src={item.img} alt={item.name} />
+                                      <h2>{item.name}</h2>
+                                      <p>{item.text}</p>
+                                      <span>
+                                          <div><AiOutlineCalendar style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.date}</div>
+                                          <div><AiOutlineEye style={{marginRight:'0.2rem'}} color='blue' size={20} /> {item.viewers}</div>
+                                      </span>                        </Card>
+                              </ItemsWrapper>
+                          )
+                      })}
+                  </Splide>
+              </>}
           </RightDiv>
         </Wrapper>
         <Companies />
@@ -96,6 +158,30 @@ const Wrapper = styled.div`
   margin-top: 2rem;
 
 `
+const ArrowDown = styled(IoIosArrowDown)`
+  cursor:pointer;
+`
+const ArrowUp = styled(IoIosArrowUp)`
+  cursor:pointer;
+`
+const MobileCategory = styled.div`
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  h2{
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+`
+const MobileTitle = styled.div`
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 1rem 0;
+`
 const MainText = styled.div`
   padding-top: 10rem;
   padding-left: 4rem;
@@ -104,6 +190,9 @@ const MainText = styled.div`
   color:#0F1822;
   span{
     color:grey;
+  }
+  @media (max-width: 1200px){
+    padding-top: 5rem;
   }
 `
 const MostRead = styled.div`
@@ -131,9 +220,14 @@ const CateGoryTitle = styled.div`
   background-color:#ECECEC;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  margin-top: 0.5rem;
   h2{
     margin-left: 0.5rem;
     font-size: 1.5rem;
+  }
+  @media (max-width: 1200px){
+    padding-left: 0;
+    justify-content:center;
   }
 `
 const CategoryWrap = styled.div`
@@ -151,6 +245,9 @@ const LeftDiv = styled.div`
 const ComponentWrapper = styled.div`
   display:flex;
   flex-wrap:wrap;
+  @media (max-width: 1200px){
+    justify-content:center;
+   }
 `
 
 const RightDiv = styled.div`
@@ -162,6 +259,10 @@ const RightDiv = styled.div`
     font-size: 2.5rem;
     color:#0F1822;
   }
+  
+ @media (max-width: 1200px){
+  width: 100%;
+ }
 `
 const ItemDiv = styled.div`
     position: relative;

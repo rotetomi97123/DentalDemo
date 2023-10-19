@@ -85,7 +85,8 @@ const ListItem = styled.li`
     font-size: 0.9rem;
     padding: 0.5rem 0;
     cursor: pointer;
-    border-bottom: ${(props) => (props.selected ? '3px solid #0047AB' : 'none')};
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
     &:hover{
         border-bottom: 3px solid #0047AB;
     }
