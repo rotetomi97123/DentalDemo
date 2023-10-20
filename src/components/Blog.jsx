@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BlogComponents } from './data'
 import {AiOutlineCalendar, AiOutlineEye} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Blog = () => {
   return (
@@ -13,7 +14,7 @@ const Blog = () => {
             {BlogComponents.map((item,index) => {
                 return(
                     <ItemDiv key={index}>
-                        <img src={item.img} alt={item.name} />
+                        <Link to='/BlogItem' state={{ item: item }}><img src={item.img} alt={item.name} /></Link>
                         <h2>{item.name}</h2>
                         <p>{item.text}</p>
                         <span>

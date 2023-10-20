@@ -107,7 +107,7 @@ const BlogPage = () => {
                         return(
                             <ItemsWrapper key={index}>
                                 <Card>
-                                    <img src={item.img} alt={item.name} />
+                                    <Link to='/BlogItem' state={{ item: item }}><img src={item.img} alt={item.name} /></Link>
                                     <h2>{item.name}</h2>
                                     <p>{item.text}</p>
                                     <span>
@@ -155,7 +155,7 @@ const BlogPage = () => {
                           return(
                               <ItemsWrapper key={index}>
                                   <Card>
-                                      <img src={item.img} alt={item.name} />
+                                      <Link to='/BlogItem' state={{ item: item }}><img src={item.img} alt={item.name} /></Link>
                                       <h2>{item.name}</h2>
                                       <p>{item.text}</p>
                                       <span>

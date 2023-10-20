@@ -5,7 +5,7 @@ import {ImEarth,ImFacebook} from 'react-icons/im'
 import LanguageComponent from './LanguageComponent'
 import { useState } from 'react'
 import {BsCartFill,BsFillTelephoneFill} from 'react-icons/bs'
-
+import { Link } from 'react-router-dom'
 
 const TopNav = () => {
   
@@ -61,18 +61,22 @@ const TopNav = () => {
               <p>Hungarian version - Change</p>
             </MobileLang>
           <ul>
-                  <ListItem
-                      selected={selectedItem === 'Fooldal'}
-                      onClick={() => handleItemClick('Fooldal')}
-                  >
-                  Főoldal
-                  </ListItem>
-                  <ListItem
-                      selected={selectedItem === 'Blog'}
-                      onClick={() => handleItemClick('Blog')}
-                  >
-                  Blog
-                  </ListItem>
+                  <Link to='/'>
+                    <ListItem
+                        selected={selectedItem === 'Fooldal'}
+                        onClick={() => handleItemClick('Fooldal')}
+                    >
+                    Főoldal
+                    </ListItem>
+                  </Link>
+                  <Link to='/Blog'>
+                    <ListItem
+                        selected={selectedItem === 'Blog'}
+                        onClick={() => handleItemClick('Blog')}
+                    >
+                    Blog
+                    </ListItem>
+                  </Link>
                   <ListItem
                       selected={selectedItem === 'Esemenyek'}
                       onClick={() => handleItemClick('Esemenyek')}
@@ -173,6 +177,11 @@ const MobileMenu = styled.div`
   top: 0;
   left: 0;
   background: white;
+  a{
+    text-decoration:none;
+    list-style-type:none;
+    color:black;
+  }
   ul{
     padding-top: 2rem;
     padding-left: 2rem;
