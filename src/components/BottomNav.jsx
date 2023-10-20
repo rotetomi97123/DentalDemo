@@ -23,9 +23,11 @@ const BottomNav = () => {
                 <ListItem>
                     Események
                 </ListItem>
-                <ListItem>
-                    Rólunk
-                </ListItem>
+                <Link to='/Rólunk'>
+                    <ListItem>
+                        Rólunk
+                    </ListItem>
+                </Link>
                 <ListItem>
                     Katalógusok
                 </ListItem>

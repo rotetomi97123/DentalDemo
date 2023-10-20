@@ -326,6 +326,7 @@ const ItemDiv = styled.div`
         }
         @media (max-width: 400px){
             width: 90%;
+            padding: 0 0;
         }
     }
     img{

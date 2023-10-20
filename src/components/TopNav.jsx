@@ -29,12 +29,7 @@ const TopNav = () => {
     };
   }, []);
 
-  const [selectedItem, setSelectedItem] = useState('Fooldal');
-
-
-    const handleItemClick = (item) => {
-      setSelectedItem(item);
-    };
+  
   return (
     <>
       <Wrapper>
@@ -62,49 +57,30 @@ const TopNav = () => {
             </MobileLang>
           <ul>
                   <Link to='/'>
-                    <ListItem
-                        selected={selectedItem === 'Fooldal'}
-                        onClick={() => handleItemClick('Fooldal')}
-                    >
+                    <ListItem>
                     Főoldal
                     </ListItem>
                   </Link>
                   <Link to='/Blog'>
-                    <ListItem
-                        selected={selectedItem === 'Blog'}
-                        onClick={() => handleItemClick('Blog')}
-                    >
+                    <ListItem>
                     Blog
                     </ListItem>
                   </Link>
-                  <ListItem
-                      selected={selectedItem === 'Esemenyek'}
-                      onClick={() => handleItemClick('Esemenyek')}
-                  >
+                  <ListItem>
                   Események
                   </ListItem>
-                  <ListItem
-                      selected={selectedItem === 'Rolunk'}
-                      onClick={() => handleItemClick('Rolunk')}
-                  >
-                  Rólunk
-                  </ListItem>
-                  <ListItem
-                      selected={selectedItem === 'Katalogus'}
-                      onClick={() => handleItemClick('Katalogus')}
-                  >
+                  <Link to='/Rólunk'>
+                    <ListItem>
+                    Rólunk
+                    </ListItem>
+                  </Link>
+                  <ListItem>
                   Katalógusok
                   </ListItem>
-                  <ListItem
-                      selected={selectedItem === 'Beszallitoink'}
-                      onClick={() => handleItemClick('Beszallitoink')}
-                  >
+                  <ListItem>
                   Beszállitóink
                   </ListItem>
-                  <ListItem
-                      selected={selectedItem === 'Shop'}
-                      onClick={() => handleItemClick('Shop')}
-                  >
+                  <ListItem>
                   <BsCartFill /> Shop
                   </ListItem>
               </ul>
