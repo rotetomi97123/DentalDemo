@@ -1,0 +1,70 @@
+.Wrapper {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+.MainTitle {
+  padding-top: 10rem;
+  padding-left: 4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f1822;
+  @media (max-width: 1200px) {
+    padding-top: 5rem;
+  }
+}
+.MainTitle span {
+  color: grey;
+}
+.ContentTitle {
+  text-align: center;
+  color: #0f1822;
+  padding-top: 1rem;
+}
+.Content {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  height: auto;
+  flex-wrap: wrap;
+}
+.Content h2 {
+  font-size: 1rem;
+  width: 300px;
+  margin: 1rem 0;
+}
+.Content p {
+  font-size: 0.9rem;
+  width: 300px;
+}
+.Content span {
+  position: absolute;
+  bottom: 0;
+  width: 325px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem 0.5rem;
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+}
+.Content span div {
+  display: flex;
+  align-items: center;
+}
+.Card {
+  width: 350px;
+  height: 500px;
+  margin: 0 0.5rem;
+  position: relative;
+}
+.Card img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.Card img:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
